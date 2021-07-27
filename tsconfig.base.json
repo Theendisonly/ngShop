@@ -14,7 +14,12 @@
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "@monkey-business/orders": ["libs/orders/src/index.ts"],
+            "@monkey-business/products": ["libs/products/src/index.ts"],
+            "@monkey-business/ui": ["libs/ui/src/index.ts"],
+            "@monkey-business/users": ["libs/users/src/index.ts"]
+        }
     },
     "exclude": ["node_modules", "tmp"]
 }

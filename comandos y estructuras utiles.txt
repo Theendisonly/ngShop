@@ -1,0 +1,41 @@
+-->>>>graphql
+->Consulta
+    query test($id:Int!){
+        personType(id:$id){
+            id,
+            name,
+            description,
+            creationDate
+        }
+    }
+->Consulta multiple con un data como parametro
+    query test{
+        personTypes{
+            data{
+                id,
+                name,
+                description
+            }
+        }
+    }
+->Creacion
+    mutation test($name:String!,$description:String){
+        createPersonType(input:{name:$name,description:$description}){
+            id,
+            name,
+            creationDate
+        }
+    }
+
+-->>>>GIT
+git rm -r --cached [archivos que desas remover del add]
+
+-->>>>NX monorepo
+--Crear componente en una app   
+    nx g component shared/header(carpeta y nombre del componente a crear) --project=ngshop(nombre de la app donde se va a crear el componente)
+--iniciar una app
+    ng serve ngshop(nombre de la app a iniciar)
+--Crear libreria en libs
+    npx nx g @nrwl/workspace:lib ui(nomre de la libreria)
+--Crear libreria en libs
+    ng generate @nrwl/angular:library --name=users --buildable --enableIvy --prefix=users --routing --no-interactive
